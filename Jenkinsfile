@@ -2,7 +2,7 @@ pipeline {
     agent any
     stages {
         stage ('Build Dockerfile') {
-            step {
+            steps {
 
                sh 'docker build -t sample_html .' 
             }
