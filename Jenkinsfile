@@ -14,7 +14,7 @@ pipeline {
         stage ('Docker run') {
             steps {
 
-               sh 'docker run -p80:80 -d sample_html' 
+               sh 'docker run -p85:80 -d sample_html' 
             }
 
 
