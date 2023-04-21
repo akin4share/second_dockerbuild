@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-internet
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-internet
+  template:
+    metadata:
+      labels:
+        app: hello-internet
+    spec:
+      containers:
+        - name: hello-internet
+          image: akin4dada/hello-internet:1.0
+          ports:
+          - containerPort:  80
+...
