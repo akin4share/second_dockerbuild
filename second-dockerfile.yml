@@ -2,20 +2,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-internet
+  name: second-dockerfile
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello-internet
+      app: second-dockerfile
   template:
     metadata:
       labels:
-        app: hello-internet
+        app: second-dockerfile
     spec:
       containers:
-        - name: hello-internet
-          image: akin4dada/hello-internet:1.0
+        - name: second-dockerfile
+          image: akin4dada/second-dockerfile:1.0
           ports:
           - containerPort:  80
 ...
